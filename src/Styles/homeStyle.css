@@ -1,0 +1,14 @@
+.dark-background{
+    align-items: center;
+    background-color: rgb(74,21,75);
+
+}
+
+.workspaces{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background-color: rgb(255,255,255);
+    border-radius: 3px solid rgb(110,68,111);
+    
+}
