@@ -3,6 +3,7 @@ import ENVIROMENT from '../utils/constants/enviroment'
 import { getAuthenticatedHeaders } from '../fetching/customHeaders'
 import { useFetch } from '../hooks/useFetch'
 import { Link } from 'react-router-dom'
+import './Styles/homeStyle.css'
 
 
 const HomeScreen = () => {
