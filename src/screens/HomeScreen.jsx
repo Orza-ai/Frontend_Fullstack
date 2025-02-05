@@ -25,7 +25,7 @@ return (
                         srcSet='https://a.slack-edge.com/6c404/marketing/img/homepage/bold-existing-users/waving-hand.gif 1x, https://a.slack-edge.com/6c404/marketing/img/homepage/bold-existing-users/waving-hand.gif 2x'/>
                         <img src='https://a.slack-edge.com/6c404/marketing/img/homepage/bold-existing-users/waving-hand.gif' srcSet='https://a.slack-edge.com/6c404/marketing/img/homepage/bold-existing-users/waving-hand.gif 1x, https://a.slack-edge.com/6c404/marketing/img/homepage/bold-existing-users/waving-hand.gif 2x'/>
                     </picture>
-                <span>Bienvenido a la app {/* en un futuro podrian poner el nombre del usuario */}</span>
+                <span>¡Bienvenido a la app! {/* en un futuro podrian poner el nombre del usuario */}</span>
                 </h1>
             </div>
             <div className='workspaces'>
@@ -38,9 +38,13 @@ return (
                         workspace_response.data.workspaces.length ?  
                         workspace_response.data.workspaces.map(workspace => {
                             return (
-                                <div key={workspace._id}>
-                                    <h3>{workspace.name}</h3>
-                                    <Link to={`/workspace/${workspace._id}`}>Ir al workspace</Link>
+                                <div className='workspace-list-container'>                                    
+                                    <div className='workspace-detail' key={workspace._id}>
+                                        <h3>{workspace.name}</h3>
+                                        <span className='detail-workspace-button'>
+                                            <Link to={`/workspace/${workspace._id}`}>Ir al workspace</Link>
+                                        </span>
+                                    </div>
                                 </div>
                             )
                         })
