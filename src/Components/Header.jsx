@@ -1,3 +1,9 @@
+import { useState } from "react"
+
+const Header = () => {
+const [isOpen, setIsOpen] = useState(false)
+
+return(
 <header>
     <nav>
     <div>
@@ -15,7 +21,7 @@
         <nav>
             <ul className="extnav-level__0">
                 <li>
-                    <button className="dropdown-button">
+                    <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
                         <span>Funciones</span>
                     </button>
                     <ul className="extnav-level__1">
@@ -367,3 +373,6 @@
     </div>
     </nav>
 </header>
+)}
+
+export default Header

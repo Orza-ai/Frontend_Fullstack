@@ -3,6 +3,8 @@ import useForm from '../hooks/useForm'
 import ENVIROMENT from '../utils/constants/enviroment'
 import { Link, useNavigate} from 'react-router-dom'
 import { AuthContext } from '../Context/AuthContext'
+import '../Styles/loginStyle.css'
+
 const LoginScreen = () => {
 
     const {login, isAuthenticatedState} = useContext(AuthContext)
@@ -14,7 +16,6 @@ const LoginScreen = () => {
         alert('Cuenta verificada')
     }
     const handleSubmitForm = async (event) =>{
-       
         try{
             event.preventDefault()
             const response = await fetch(ENVIROMENT.API_URL + '/api/auth/login', {

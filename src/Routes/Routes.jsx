@@ -13,7 +13,7 @@ import WorkspaceScreen from "../screens/WorkspaceScreen"
 const RunPages = () => {
     return(
         <Routes>
-        <Route path='/' element={<HomeScreen/>}/>
+        <Route path='/' element={<LoginScreen/>}/>
         <Route path='/register' element={<RegisterScreen/>}/>
         <Route path='/login' element={<LoginScreen/>}/>
         <Route path='/error' element={<ErrorScreen/>}/>
